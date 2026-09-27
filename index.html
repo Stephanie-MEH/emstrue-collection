@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EMSTRUE COLLECTION | Luxury Ladies Accessories</title>
+    <meta name="description" content="EMSTRUE COLLECTION — curated handbags, jewellery and shoes for timeless style.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar" id="home">
+
+        <a href="#home" class="brand" aria-label="EMSTRUE COLLECTION home">
+            EMSTRUE COLLECTION
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+            <a href="#home" class="active">Home</a>
+
+            <a href="#collections">
+                Shop
+                <span class="sale-badge">Sale</span>
+            </a>
+
+            <a href="#featured">Featured</a>
+            <a href="#services">Services</a>
+            <a href="#how-we-work">How We Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="icons" aria-label="Quick actions">
+
+            <button type="button" class="icon-button" aria-label="Go to home" data-target="#home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                    <path d="M9 22V12h6v10"/>
+                </svg>
+            </button>
+
+            <button type="button" class="icon-button" id="search-button" aria-label="Find products">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="11" cy="11" r="6"/>
+                    <path d="M21 21l-4.3-4.3"/>
+                </svg>
+            </button>
+
+            <button type="button" class="icon-button" id="favorite-button" aria-label="View favourites">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                </svg>
+            </button>
+
+            <button type="button" class="icon-button cart-btn" id="cart-button" aria-label="View shopping cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <path d="M6 6h15l-1.5 9h-13z"/>
+                    <path d="M6 6L5 2H2"/>
+                    <circle cx="9" cy="20" r="1.5"/>
+                    <circle cx="18" cy="20" r="1.5"/>
+                </svg>
+                <span class="badge" id="cart-count">0</span>
+            </button>
+
+            <button type="button" class="icon-button" id="profile-button" aria-label="View profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4"/>
+                    <path d="M4 20a8 8 0 0116 0"/>
+                </svg>
+            </button>
+
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+
+            <div class="hero-image" role="img" aria-label="Luxury fashion accessories collection"></div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">Curated Luxury; Timeless Styles</p>
+
+                <h1 id="hero-title">Elegance Just For You</h1>
+
+                <p>
+                    Give yourself the beauty treatment that only
+                    beautiful accessories can give.
+                </p>
+
+                <a href="#collections" class="shop-button">
+                    SHOP NOW
+                </a>
+            </div>
+
+        </section>
+
+        <section class="categories" id="collections" aria-labelledby="collections-title">
+
+            <div class="section-heading">
+                <span>Explore</span>
+                <h2 id="collections-title">Our Collections</h2>
+                <p>Discover accessories selected to complement your personal style.</p>
+            </div>
+
+            <div class="category-grid">
+                <a href="#featured" class="category-card">
+                    <img src="Images/bag collection (3).jpeg"
+                         alt="EMSTRUE women's handbag collection">
+                    <div>
+                        <h3>Handbags</h3>
+                        <span>Shop Collection →</span>
+                    </div>
+                </a>
+
+                <a href="#featured" class="category-card">
+                    <img src="Images/jewelry collection (1).jpeg"
+                         alt="EMSTRUE jewellery collection">
+                    <div>
+                        <h3>Jewellery</h3>
+                        <span>Shop Collection →</span>
+                    </div>
+                </a>
+
+                <a href="#featured" class="category-card">
+                    <img src="Images/shoe collection (9).jpeg"
+                         alt="EMSTRUE women's shoe collection">
+                    <div>
+                        <h3>Shoes</h3>
+                        <span>Shop Collection →</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+
+        <section class="featured" id="featured" aria-labelledby="featured-title">
+
+            <div class="featured-heading">
+                <span>Discover</span>
+
+                <h2 id="featured-title">Featured Collection</h2>
+
+                <p>
+                    Refined fashion accessories for timeless style
+                    and everyday elegance.
+                </p>
+            </div>
+
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/Bag.jpg" alt="Aura Canvas Mosaic handbag">
+                    </div>
+                    <h3>Aura Canvas Mosaic</h3>
+                    <p>GH₵ 920</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/bag 8.jpeg" alt="Celestial Signet Bag">
+                    </div>
+                    <h3>Celestial Signet Bag</h3>
+                    <p>GH₵ 780</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/Bag (2).jpg" alt="Scarlet Bijou Cloud Clutch">
+                    </div>
+                    <h3>Scarlet Bijou Cloud Clutch</h3>
+                    <p>GH₵ 980</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/Bag 001 (1).jpg" alt="Vanguard Croc Satchel">
+                    </div>
+                    <h3>Vanguard Croc Satchel</h3>
+                    <p>GH₵ 950</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/jewelry (2).jpg" alt="Solstice Molten Stud earrings">
+                    </div>
+                    <h3>Solstice Molten Stud</h3>
+                    <p>GH₵ 250</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/brooch (2).jpeg" alt="Marquis Stellar Brooch">
+                    </div>
+                    <h3>Marquis Stellar Brooch</h3>
+                    <p>GH₵ 350</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/rings (1).jpeg" alt="Onyx Horizon Ring">
+                    </div>
+                    <h3>Onyx Horizon Ring</h3>
+                    <p>GH₵ 1,002</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/bracelet stack.jpeg" alt="Starlight Serenity bracelet stack">
+                    </div>
+                    <h3>Starlight Serenity Bracelets</h3>
+                    <p>GH₵ 1,125</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/shoes.jpg" alt="Aero Plush black stilettos">
+                    </div>
+                    <h3>Aero Plush Stilettos</h3>
+                    <p>GH₵ 865</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/flats (1).jpeg" alt="Parlais Crystal Point black ballet flats">
+                    </div>
+                    <h3>Parlais Crystal Point</h3>
+                    <p>GH₵ 799</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/shoes (1).jpg" alt="Croc Avant black block leather heels">
+                    </div>
+                    <h3>Croc Avant Block Heels</h3>
+                    <p>GH₵ 950</p>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="Images/heels (1).jpeg" alt="Prism Stardust stilettos">
+                    </div>
+                    <h3>Prism Stardust Stilettos</h3>
+                    <p>GH₵ 988</p>
+                </article>
+
+            </div>
+        </section>
+
+
+      <section class="services" id="services">
+    <div class="section-heading">
+        <p class="eyebrow">WHAT WE OFFER</p>
+        <h2>Our Services</h2>
+        <p>Explore our carefully selected collection of fashion accessories.</p>
+    </div>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="service-icon">👠</div>
+            <h3>Shoes</h3>
+            <p>
+                Discover stylish heels, flats and statement footwear
+                selected to complement every look.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💎</div>
+            <h3>Jewellery</h3>
+            <p>
+                Add the finishing touch with elegant necklaces,
+                bracelets, earrings, rings and brooches.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">👜</div>
+            <h3>Bags</h3>
+            <p>
+                Shop versatile bags ranging from everyday pieces
+                to stylish corporate and statement bags.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+        <section class="how-we-work" id="how-we-work">
+    <div class="section-heading">
+        <p class="eyebrow">OUR PROCESS</p>
+        <h2>How We Work</h2>
+        <p>Shopping with Emstrue Collection is simple and convenient.</p>
+    </div>
+
+    <div class="steps-grid">
+
+        <div class="step-card">
+            <div class="step-icon">🛍️</div>
+            <span class="step-number">01</span>
+            <h3>Browse</h3>
+            <p>
+                Explore our collection of shoes, jewellery and bags.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon">❤️</div>
+            <span class="step-number">02</span>
+            <h3>Choose</h3>
+            <p>
+                Select the pieces that match your personal style.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon">💬</div>
+            <span class="step-number">03</span>
+            <h3>Contact Us</h3>
+            <p>
+                Send us a message to confirm availability and
+                complete your order.
+            </p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-icon">✨</div>
+            <span class="step-number">04</span>
+            <h3>Enjoy</h3>
+            <p>
+                Receive your selected pieces and enjoy your new look.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+
+            <div class="section-heading">
+                <span>Get In Touch</span>
+
+                <h2 id="contact-title">Let's Connect</h2>
+
+                <p>
+                    Have a question about an item?
+                    Send us a message and we'll get back to you.
+                </p>
+            </div>
+
+            <div class="contact-container">
+
+                <div class="contact-details">
+                    <h3>EMSTRUE COLLECTION</h3>
+
+                    <p>
+                        We are here to help you find accessories
+                        that complement your personal style.
+                    </p>
+
+                    <!-- Replace the placeholders below with the real business details. -->
+                    <p>
+                        <strong>Location:</strong><br>
+                        Tema Community Two Lumumba Drv. (Accra,Ghana)
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong><br>
+                        emstruecollection@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong><br>
+                        +233 59 496 6809
+                    </p>
+
+                    <p>
+                        <strong>Instagram:</strong><br>
+                        @emst.rue
+                    </p>
+                </div>
+
+                <form id="contact-form" novalidate>
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Your email"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="How can we help you?"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        SEND MESSAGE
+                    </button>
+
+                    <p id="form-message" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-logo">
+            EMSTRUE COLLECTION
+        </div>
+
+        <p>
+            Curated Luxury. Timeless Style.
+        </p>
+
+        <div class="footer-links" aria-label="Footer navigation">
+            <a href="#home">Home</a>
+            <a href="#collections">Shop</a>
+            <a href="#featured">Featured</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="social-links" aria-label="EMSTRUE COLLECTION social media">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/emst.rue"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit EMSTRUE COLLECTION on Instagram"
+       title="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+        </svg>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/share/1HhEGKwqwS/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit EMSTRUE COLLECTION on Facebook"
+       title="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"></path>
+        </svg>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@emst.rue"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit EMSTRUE COLLECTION on TikTok"
+       title="TikTok">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 3c.4 2.4 1.8 3.8 4 4v3.2c-1.5-.1-2.8-.5-4-1.3V15a6 6 0 1 1-5.2-5.9v3.3a2.7 2.7 0 1 0 2 2.6V3h3.2z"></path>
+        </svg>
+    </a>
+
+    <!-- Snapchat -->
+    <a href="https://www.snapchat.com/add/emst-rue"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Visit EMSTRUE COLLECTION on Snapchat"
+       title="Snapchat">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3.2c-3 0-5 2.2-5 5.3v2.1c0 .7-.4 1.2-1.2 1.5l-1.3.5c-.5.2-.5.8-.1 1.1.7.5 1.6.8 2.5.9.2 1.1.8 1.8 1.7 2.1.4.1.8.2 1.1.2.5 1 1.4 1.7 2.3 1.7s1.8-.7 2.3-1.7c.4 0 .8-.1 1.1-.2.9-.3 1.5-1 1.7-2.1.9-.1 1.8-.4 2.5-.9.4-.3.4-.9-.1-1.1l-1.3-.5c-.8-.3-1.2-.8-1.2-1.5V8.5c0-3.1-2-5.3-5-5.3z"></path>
+        </svg>
+    </a>
+
+</div>
+
+        <p class="disclaimer">
+            ❗DISCLAIMER: Emstrue Collection is not affiliated with,
+            associated with, or endorsed by any brand featured in our posts.
+        </p>
+
+        <div class="copyright">
+            &copy; 2026 EMSTRUE COLLECTION. All Rights Reserved.
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

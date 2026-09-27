@@ -1,0 +1,861 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+    background: #f8f7f5;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+
+.navbar {
+    min-height: 62px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+
+.brand {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: #222;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navigation {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation a {
+    position: relative;
+    color: #333;
+    text-decoration: none;
+    font-size: 10px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navigation a:hover,
+.navigation a:focus-visible {
+    color: #866047;
+}
+
+.navigation .active {
+    font-weight: 600;
+}
+
+.sale-badge {
+    position: absolute;
+    top: -13px;
+    right: -10px;
+    background: #a70613;
+    color: #fff;
+    font-size: 8px;
+    line-height: 1;
+    padding: 3px 4px;
+    border-radius: 2px;
+}
+
+
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease;
+    position: relative;
+    color: #222;
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+    background: #f1f0f1;
+    color: #070707;
+}
+
+.icon-button svg {
+    width: 15px;
+    height: 15px;
+}
+
+.cart-btn .badge {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    background: #a70613;
+    color: #fff;
+    font-size: 8px;
+    width: 11px;
+    height: 11px;
+    line-height: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+
+.hero {
+    height: 580px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    background-image: url("Images/hero image (3).jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25, 12, 8, 0.58),
+            rgba(40, 20, 10, 0.10),
+            rgba(20, 10, 5, 0.38)
+        );
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90%, 850px);
+    text-align: center;
+    color: #fff;
+}
+
+.eyebrow {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.hero-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+}
+
+.hero-content p:not(.eyebrow) {
+    font-size: 13px;
+    font-weight: 300;
+    margin: 0 auto 25px;
+    letter-spacing: 0.2px;
+    max-width: 560px;
+}
+
+.shop-button {
+    display: inline-block;
+    padding: 13px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    color: #fff;
+    text-decoration: none;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    transition: all 0.3s ease;
+}
+
+.shop-button:hover,
+.shop-button:focus-visible {
+    background: #fff;
+    color: #333;
+}
+
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 45px;
+    max-width: 650px;
+}
+
+.section-heading span {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    color: #b47b8c;
+    font-size: 18px;
+}
+
+.section-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin: 5px 0 12px;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+.categories {
+    padding: 85px 6%;
+    background: #fff;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(0, 0, 0, 0.8)
+    );
+}
+
+.category-card div {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 25px;
+}
+
+.category-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.category-card span {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.featured {
+    padding: 90px 7%;
+    background: #f8f7f5;
+}
+
+.featured-heading {
+    text-align: center;
+    margin: 0 auto 50px;
+    max-width: 650px;
+}
+
+.featured-heading span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #8a674f;
+}
+
+.featured-heading h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin: 5px 0 10px;
+}
+
+.featured-heading p {
+    max-width: 480px;
+    margin: auto;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #fff;
+    padding-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 330px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 18px 12px 0;
+}
+
+.product-card p {
+    font-size: 11px;
+    color: #765540;
+    margin-top: 5px;
+}
+
+
+
+.services {
+    padding: 90px 7%;
+    background: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 35px 30px;
+    background: #f8f7f5;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.service-number {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    color: #b47b8c;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+
+.how-we-work {
+    padding: 90px 7%;
+    background: #f8f7f5;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+.step > span {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    color: #b47b8c;
+}
+
+.step h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.step p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+
+.service-icon,
+.step-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #f4e8e4;
+    font-size: 28px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover .service-icon,
+.step-card:hover .step-icon {
+    transform: translateY(-5px);
+    background: #ead5cf;
+}
+
+.step-number {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #8b6f61;
+}
+
+
+
+.contact {
+    padding: 90px 7%;
+    background: #fff;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+}
+
+.contact-details {
+    background: #f8f7f5;
+    padding: 35px;
+}
+
+.contact-details h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+form {
+    padding: 35px;
+    border: 1px solid #eee;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    background: #fafafa;
+    color: #222;
+    border-radius: 0;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid transparent;
+    border-color: #8a674f;
+    box-shadow: 0 0 0 2px rgba(138, 103, 79, 0.12);
+}
+
+.submit-button {
+    padding: 12px 25px;
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    font-size: 9px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+    background: #fff;
+    color: #000;
+}
+
+#form-message {
+    margin-top: 15px;
+    color: #866047;
+    font-size: 11px;
+    line-height: 1.5;
+    min-height: 17px;
+}
+
+
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.footer-logo {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer > p {
+    color: #e2bfd1;
+    font-size: 11px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 22px 0;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.social-links a:nth-child(2) svg,
+.social-links a:nth-child(3) svg,
+.social-links a:nth-child(4) svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.disclaimer {
+    max-width: 700px;
+    margin: 20px auto 15px;
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+.copyright {
+    color: #b3a0a7;
+    font-size: 9px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   FOCUS ACCESSIBILITY
+========================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #866047;
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+    .navbar {
+        padding: 12px 4%;
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: center;
+        padding: 3px 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: auto;
+        padding: 14px 20px;
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 18px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .navigation::-webkit-scrollbar {
+        display: none;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+    .icons {
+        gap: 6px;
+    }
+
+    .icon-button {
+        width: 25px;
+        height: 25px;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-content {
+        width: 88%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .hero-content p:not(.eyebrow) {
+        font-size: 11px;
+        max-width: 320px;
+        line-height: 1.6;
+    }
+
+    .eyebrow {
+        font-size: 16px;
+    }
+
+    .section-heading h2,
+    .featured-heading h2 {
+        font-size: 35px;
+    }
+
+    .categories,
+    .featured,
+    .services,
+    .how-we-work,
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .category-grid,
+    .services-grid,
+    .steps-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        height: 340px;
+    }
+
+    .product-image {
+        height: 350px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    form,
+    .contact-details {
+        padding: 25px;
+    }
+
+    .footer-links,
+    .social-links {
+        gap: 14px;
+    }
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
